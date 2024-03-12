@@ -1,0 +1,87 @@
+body {
+    background-color: #242424;
+}
+
+h1 {
+    color: orange;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+h2 {
+    color: orange;
+    margin: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(50%, 1fr) 3fr;
+}
+
+.creature {
+    border: 2px solid orange;
+    border-radius: 10px;
+    /* width: 45%; */
+    margin: 7px;
+    /* padding: 5px; */
+}
+
+img {
+    border: 1px solid orange;
+    border-radius: 10px;
+    margin: 10px;
+    float: left;
+    width: 250px;
+}
+
+.creature-data {
+    padding: 10px;
+}
+
+.creature-description {
+    color: white;
+    text-align: justify;
+}
+
+.creature-abilities {
+    display: inline-block;
+    width: 60%;
+}
+
+.ability-title {
+    font-style: italic;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    color: grey;
+    line-height: 0px;
+}
+
+/* .ability-bar-container {
+    width: 100%;
+} */
+
+.ability-bar {
+    /* display: inline-block; */
+    width: 75%;
+    height: 18px;
+    padding: 1px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.bar {
+    border-radius: 50px;
+}
+
+.bar--danger {
+    background-color: red;
+}
+
+.bar--high {
+    width: 80%;
+}
+
+
+
