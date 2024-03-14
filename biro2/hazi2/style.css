@@ -6,6 +6,7 @@ h1 {
     color: orange;
     font-family: cursive;
     font-weight: bold;
+    text-align: center;
 }
 
 h2 {
@@ -71,6 +72,7 @@ img {
     border-radius: 50px;
 }
 
+
 .bar {
     border-radius: 50px;
 }
@@ -79,9 +81,47 @@ img {
     background-color: red;
 }
 
+.bar--intelligence {
+    background-color: aqua;
+}
+
+.bar--frequency {
+    background-color: blueviolet;
+}
+
+
 .bar--high {
     width: 80%;
 }
 
+.bar--medium {
+    width: 50%;
+}
+
+.bar--low {
+    width: 25%;
+}
+
+
+.buy-ticket {
+    margin: 10px 0px;
+}
+
+.price {
+    color: white;
+    text-align: center;
+}
+
+.price::before {
+    content: '$ ';
+}
+
+.buy {
+    padding: 10px 100px;
+    text-transform: uppercase;
+    color: black;
+    background-color: rgb(249, 186, 69);
+    margin: 0 auto;
+}
 
 
