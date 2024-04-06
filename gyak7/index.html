@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Jók lettek a projektek :3</title>
+    <style>
+        input[type=radio] {
+            margin-right: 10px;
+        }
+
+        input:required {
+            border-color: red;
+        }
+
+        footer {
+            color: gray;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Adategyeztetés</h1>
+</header>
+<main>
+    <form action="signup.php" method="POST">
+        <fieldset>
+            <legend>Azonosítási adatok</legend>
+
+            <label for="email">E-mail cím: (kötelező)</label><br>
+            <input type="email" name="email" id="email" required><br>
+
+            <label for="password">Jelszó: (kötelező)</label><br>
+            <input type="password" name="password" id="password" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Egyéb adatok</legend>
+
+            <label for="name">Név:</label><br>
+            <input type="text" name="name" id="name" placeholder="Próba Ödön" maxlength="80"><br>
+
+            <label for="birth">Születés dátuma:</label><br>
+            <input type="date" name="birth" id="birth"><br>
+
+            <label for="number">Kedvenc szám:</label><br>
+            <input type="number" name="number" id="number" min="0" max="1000"><br>
+
+            <label for="axerwaliakok">Mit gondolsz az axerwáliakokról?</label><br>
+            <textarea name="axerwaliakok" id="axerwaliakok" cols=100 rows=10></textarea><br>
+        </fieldset>
+        <fieldset>
+            <legend>Mit akarnak az axerwáliakok?</legend>
+
+            <label><input type="checkbox" name="reasons" value="cows"> Teheneket</label><br>
+            <label><input type="checkbox" name="reasons" value="mirrors"> Összetörni a tükröket</label><br>
+            <label><input type="checkbox" name="reasons" value="ladders"> Átmenni a létra alatt</label><br>
+            <label><input type="checkbox" name="reasons" value="cats"> Macskákat</label><br>
+            <label><input type="checkbox" name="reasons" value="olga"> Olgát</label><br>
+            <label><input type="checkbox" name="reasons" value="doors"> Ajtókat</label><br>
+            <label><input type="checkbox" name="reasons" value="5"> Webterv 5-öst</label><br>
+        </fieldset>
+
+        <input type="submit" name="submit" value="Küldés">
+        <input type="reset" value="Visszaállítás">
+    </form>
+</main>
+<footer>
+    <p>Itt a php T-T</p>
+</footer>
+</body>
+</html>
