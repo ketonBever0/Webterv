@@ -2,17 +2,16 @@
 
 function belepo($kilepbe)
 {
-    if (!is_string($kilepbe)) {
+    if (!is_string($kilepbe) || $kilepbe === "") {
         return null;
     }
 
-    if (str_starts_with($kilepbe, " ") || str_ends_with($kilepbe, " ")) {
+    if (trim($kilepbe) !== $kilepbe) {
         return false;
     }
 
     return true;
 }
-
 
 function lakat($lakat, $zar)
 {
@@ -35,7 +34,7 @@ function allatok($allatok)
 
     for ($i = 0; $i < count($allatok); $i++) {
         $str .= $allatok[$i];
-        $str .= $i == count($allatok) - 1 ? "." : " ";
+        $str .= $i == count($allatok) - 1 ? "." : ", ";
     }
     return $str;
 }
@@ -70,7 +69,6 @@ function kobold_harc($koboldNevek)
     }
 
     sort($koboldNevek);
-    // return $koboldNevek;
 
     $arr = [];
     $j = 0;
@@ -100,12 +98,18 @@ function fonixek($fajl)
     return $hany;
 }
 
+function vizihalak($fajl, $nevek)
+{
+
+    rsort($nevek);
+    $str = "";
+    foreach ($nevek as $nev) {
+        $str .= $nev . "\n";
+    }
 
 
-echo "<p>";
-// echo belepo("asd");
-// print_r(nyilvantartas(["unikornisok", "minotauruszok"], [7, 11], ["novenyevo", "ragadozo"]));
-// echo allatok(["asd", "dsa", "qwe"]);
-// print_r(kobold_harc(['Quirkit', 'Zizzle', 'Wisp', 'Bink']));
-echo fonixek("fonixek.txt");
-echo "</p>";
+    $kiir = fopen($fajl, "w");
+    fwrite($kiir, $str);
+    fclose($kiir);
+
+}
